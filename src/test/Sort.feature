@@ -35,3 +35,8 @@ Feature: Can it process files?
     Given An example .csv file with proper formatting, that is also the target for the output .csv file
     When I construct and run the sorting function
     Then The Constructor should properly replace the input .csv file with the output .csv file
+
+  Scenario: Complex Input file
+    Given An example .csv file with that utilizes the 6 rules of csv files to obscure the values on the first line
+    When I construct and run the sorting function
+    Then The Constructor should detect the true values stored in the input .csv, and sort them into the output .csv file
